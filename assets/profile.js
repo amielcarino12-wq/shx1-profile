@@ -9,7 +9,7 @@ document.title = siteBranding;
 
 // Profile defaults (can be overridden via query params)
 const defaultAvatar = getParam('avatar', '');
-const defaultBio = getParam('bio', 'pvp nalang naka cheat pa');
+const defaultBio = getParam('bio', 'pvp nalang naka cheat pa.');
 const defaultBgVideo = getParam('bg', 'assets/background.mp4');
 const defaultMusicSrc = getParam('music', 'assets/music.mp3');
 const defaultMusicTitle = getParam('musicTitle', 'Wish I Never Met You');
@@ -146,21 +146,30 @@ function loadUserProfile() {
         logoEl.src = defaultLogo;
     }
 
-    // Animate the default bio as a looping typewriter (slow) effect
-    function loopTypeWriter(el, text, delay = 120, pause = 2400) {
+    // Animate the default bio as a looping typewriter (slow) effect with cursor
+    function loopTypeWriter(el, text, delay = 200, pause = 0) {
         let i = 0;
 
         function step() {
             if (i < text.length) {
-                el.textContent += text.charAt(i);
+                el.textContent = text.substring(0, i + 1) + '|';
                 i += 1;
                 setTimeout(step, delay);
             } else {
-                setTimeout(() => {
-                    el.textContent = '';
-                    i = 0;
-                    step();
-                }, pause);
+                // Now delete the text
+                let j = text.length;
+                function deleteStep() {
+                    if (j > 0) {
+                        el.textContent = text.substring(0, j - 1) + '|';
+                        j -= 1;
+                        setTimeout(deleteStep, delay);
+                    } else {
+                        // Reset and start typing again
+                        i = 0;
+                        setTimeout(step, pause);
+                    }
+                }
+                deleteStep();
             }
         }
 

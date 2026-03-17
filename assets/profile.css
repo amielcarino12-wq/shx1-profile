@@ -60,13 +60,13 @@ body, html {
     width: min(380px, 92vw);
     margin: 25vh auto 0;
     padding: 2.2rem 2rem 2rem;
-    background: rgba(10, 10, 10, 0.25);
+    background: transparent;
     border: none;
     border-radius: 34px;
-    box-shadow: 0 18px 70px rgba(0,0,0,0.3);
+    box-shadow: none;
     text-align: center;
     color: #fff;
-    backdrop-filter: blur(18px);
+    backdrop-filter: none;
 }
 .profile-header {
     display: flex;
@@ -81,10 +81,10 @@ body, html {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.35);
+    border: none;
     background: #222;
     object-fit: cover;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    box-shadow: none;
 }
 .status-dot {
     position: absolute;
@@ -93,9 +93,9 @@ body, html {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    border: 2px solid rgba(0,0,0,0.7);
+    border: none;
     background: #7ed957;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.4);
+    box-shadow: none;
 }
 .name-block h1 {
     font-size: 1.75rem;
@@ -208,7 +208,7 @@ body, html {
     width: 330px;
     max-width: 92vw;
     background: rgba(12, 12, 12, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: none;
     border-radius: 22px;
     padding: 12px 14px;
     display: flex;
@@ -292,7 +292,7 @@ body, html {
     height: 42px;
     border-radius: 14px;
     background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.16);
+    border: none;
     box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 .audio-info {
