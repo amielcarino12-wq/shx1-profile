@@ -9,7 +9,7 @@ document.title = siteBranding;
 
 // Profile defaults (can be overridden via query params)
 const defaultAvatar = getParam('avatar', '');
-const defaultBio = getParam('bio', 'pvp nalang naka cheat pa.');
+const defaultBio = getParam('bio', 'You will either step forward into growth or step back into safety.');
 const defaultBgVideo = getParam('bg', 'assets/background.mp4');
 const defaultMusicSrc = getParam('music', 'assets/music.mp3');
 const defaultMusicTitle = getParam('musicTitle', 'Wish I Never Met You');
