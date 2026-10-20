@@ -18,7 +18,7 @@ const defaultMusicCover = getParam('musicCover', 'assets/cover.jpg');
 const defaultLogo = getParam('logo', 'assets/logo.png');
 
 // Discord Lanyard integration (used to sync avatar + title)
-const discordId = '702780101661687840';
+const discordId = '1122021656152510464';
 
 let audioInitialized = false;
 let bgAudio = null;
